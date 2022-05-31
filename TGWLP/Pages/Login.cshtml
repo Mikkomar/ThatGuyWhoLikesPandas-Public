@@ -1,0 +1,27 @@
+﻿@page
+@model TGWLP.Pages.LoginModel
+@inject CultureLocalizer Localizer;
+@{
+    Layout = Model.Layout;
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <form method="post">
+            <div class="row align-items-center justify-content-center h-100">
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <input type="text" class="form-control" asp-for="@Model.LoginInfoModel.UserName" />
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" asp-for="@Model.LoginInfoModel.Password" />
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" asp-page-handler="Login" class="btn btn-primary">@Localizer["Login"]</button>
+                        @*<button type="submit" asp-page-handler="SignUp" class="btn btn-secondary">@Localizer["SignUp"]</button>*@
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

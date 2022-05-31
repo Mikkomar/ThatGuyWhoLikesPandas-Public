@@ -1,0 +1,26 @@
+﻿@page "{id}"
+@model TGWLP.Pages.Story.IndexModel
+@inject CultureLocalizer Localizer;
+@{
+    Layout = Model.Layout;
+}
+
+<div class="story-page">
+    <div class="row">
+        <div class="col-md-12">
+            @if (!string.IsNullOrEmpty(Model.ReturnURL))
+            {
+                <a class="btn btn-link float-left" asp-page="@Model.ReturnURL">@Localizer["Return"]</a>
+            }
+            @if (Model.LoggedIn)
+            {
+                <a class="btn btn-primary float-right" asp-page="/Story/Edit" asp-route-id="@Model.Story.Id">@Localizer["Edit"]</a>
+            }
+        </div>
+    </div>
+    @await Html.PartialAsync("_Story_View", Model.Story)
+    @if (Model.Story.BookViewModel != null)
+    {
+        @await Html.PartialAsync("_Story_Book", Model.Story.BookViewModel)
+    }
+</div>

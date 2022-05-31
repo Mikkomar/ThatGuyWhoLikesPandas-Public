@@ -1,0 +1,24 @@
+﻿@model TGWLP.BLL.Models.StoryViewModel;
+@inject CultureLocalizer Localizer;
+
+    <div class="story-preview-wrapper">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="text-roboto story-preview">
+                    <div class="story-preview-title">
+                        <h1>@Model.Title</h1>
+                        @if (Model.PublishDate.HasValue)
+                        {
+                            <p>@Model.PublishDate.Value.ToString("dd.MM.yyyy")</p>
+                        }
+                    </div>
+                    <div class="story-text storyPreviewText">
+                        @Html.Raw(Model.Text)
+                    </div>
+                </div>
+                <a asp-page="/Story/Index" asp-route-id="@Model.Id" asp-route-returnUrl="/Index" class="link-nostyle">
+                    <button class="button story-preview-button">@Localizer["Read"]</button>
+                </a>
+            </div>
+        </div>
+    </div>

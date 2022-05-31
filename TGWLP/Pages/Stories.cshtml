@@ -1,0 +1,60 @@
+﻿@page
+@model TGWLP.Pages.StoriesModel
+@inject CultureLocalizer Localizer;
+@{
+    Layout = Model.Layout;
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-striped bg-light text-roboto">
+            <thead>
+                <tr class="bg-main text-white">
+                    <td>
+                        <h5>
+                            @Localizer["Title"]
+                        </h5>
+                    </td>
+                    <td align="right">
+                        <h5>
+                            @Localizer["PublishDate"]
+                        </h5>
+                    </td>
+                    @if (Model.LoggedIn)
+                    {
+                        <td align="right">
+                            <a asp-page="/Story/Edit">
+                                <button class="btn btn-primary">@Localizer["AddNew"]</button>
+                            </a>
+                        </td>
+                    }
+                </tr>
+            </thead>
+            <tbody>
+            @foreach (var story in Model.Stories) {
+            <tr>
+                <td>
+                    <a asp-page="/Story/Index" asp-route-id="@story.Id" asp-route-returnUrl="/Stories">
+                        @story.Title
+                    </a>
+                </td>
+                <td align="right">
+                    @if (story.PublishDate.HasValue)
+                    {
+                        @story.PublishDate.Value.ToString("dd.MM.yyyy")
+                    }
+                </td>
+            @if (Model.LoggedIn)
+            {
+                <td align="right">
+                    <a asp-page="/Story/Edit" asp-route-id="@story.Id">
+                        <button class="btn btn-primary">@Localizer["Edit"]</button>
+                    </a>
+                </td>
+            }
+            </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>

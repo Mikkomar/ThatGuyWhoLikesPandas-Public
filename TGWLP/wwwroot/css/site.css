@@ -1,0 +1,207 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+@import "Variables.css";
+
+.bg-main {
+    background: rgb(var(--color-main));
+}
+
+.bg-main-secondary {
+    background: rgb(var(--color-secondary));
+}
+
+.bg-nav {
+    background: rgb(var(--color-navbar));
+}
+
+.text-color-white {
+    color: var(--text-white) !important;
+}
+
+.text-color-main {
+    color: rgb(var(--color-main));
+}
+
+.text-color-secondary {
+    color: rgb(var(--color-secondary));
+}
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    font-size: 1rem;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 1rem;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+.text-alfaslab {
+    font-family: AlfaSlab;
+}
+
+.text-roboto {
+    font-family: Roboto-Condensed;
+}
+
+.text-raleway {
+    font-family: Raleway;
+}
+
+.text-raleway-thin {
+    font-family: Raleway-thin;
+}
+
+.text-oswald {
+    font-family: Oswald;
+}
+
+.slide-in-left {
+    -webkit-animation: slide-in-left 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940); 
+    animation: slide-in-left 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+.slide-in-right {
+    -webkit-animation: slide-in-right 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    animation: slide-in-right 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+.background-site {
+    background-image: var(--background-image);
+    background-size: auto 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.footer-wrapper{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+.background-page {
+    /*background-color: rgba(var(--color-main), 0.8);*/
+    background-color: rgba(255, 255, 255, 0.8);
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    padding-top: 60px;
+    overflow: hidden;
+    padding-bottom: 60px;
+}
+
+.link-nostyle, .link-nostyle:link, .link-nostyle:hover {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.welcome-wrapper {
+    display: none;
+}
+
+.welcome-title {
+    color: var(--text-white);
+    font-size: 18vw;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.privacy-wrapper {
+    background-color: lightgrey;
+    padding: 2em;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.header-responsive-h1 {
+    font-size: 2em;
+}
+
+@media (max-width: 768px) {
+    .header-responsive-h1 {
+        font-size: 1.9rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .header-responsive-h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .header-responsive-h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .header-responsive-h1 {
+        font-size: 2.5rem;
+    }
+}
+
+.navbar-brand {
+    font-size: 1rem;
+}

@@ -1,0 +1,32 @@
+﻿@model BLL.Models.GoogleBooksVolumeModel
+@inject CultureLocalizer Localizer
+@{
+}
+
+<div class="row pl-lg-5 pr-lg-5 book-wrapper">
+    <div class="col-12">
+        <div class="card bg-main-secondary">
+            <div class="card-header bg-main">
+                <div class="card-title text-color-white">
+                    <h3 class="text-raleway text-center">
+                    @Localizer["BookReferenced"]
+                    </h3>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12 col-lg-3 text-center mb-3">
+                        <img src="@Model.VolumeInfo.ImageLinks.Thumbnail" />
+                    </div>
+                    <div class="col-12 col-lg-7 mb-3 text-roboto">
+                        <h4 class="text-center">@Model.VolumeInfo.Title</h4>
+                        <p class="text-center">@string.Join(", ", Model.VolumeInfo.Authors)</p>
+                        <p class="text-justify">
+                            @Html.Raw(Model.VolumeInfo.Description)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

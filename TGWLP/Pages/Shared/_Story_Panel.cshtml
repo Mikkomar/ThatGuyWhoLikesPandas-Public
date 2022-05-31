@@ -1,0 +1,17 @@
+﻿@model IDictionary<int, List< TGWLP.BLL.Models.StoryViewModel>>
+@inject CultureLocalizer Localizer
+@{
+}
+
+<ul class="story-panel">
+    @for (int i = 0; i < Model.Count; i++) {
+        <div class="form-group text-roboto story-panel-wrapper">
+            <li class="story-panel-header">
+                @Model.Keys.ElementAt(i)
+            </li>
+                @for (int j = 0; j < Model.Values.ElementAt(i).Count(); j++) {
+                    @await Html.PartialAsync("_Story_Panel_Slot", Model.Values.ElementAt(i).ElementAt(j))
+                }
+        </div>
+    }
+</ul>

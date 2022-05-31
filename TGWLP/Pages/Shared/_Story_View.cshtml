@@ -1,0 +1,18 @@
+﻿@model TGWLP.BLL.Models.StoryViewModel;
+@inject CultureLocalizer Localizer;
+
+<div class="row pl-lg-5 pr-lg-5 mb-5">
+    <div class="col-12">
+        <div class="story-wrapper text-roboto">
+            <div class="story-title">
+                <h1>@Model.Title</h1>
+                @if (Model.PublishDate.HasValue) {
+                    <p>@Model.PublishDate.Value.ToString("dd.MM.yyyy")</p>
+                }
+            </div>
+            <div class="story-text">
+                @Html.Raw(Model.Text)
+            </div>
+        </div>
+    </div>
+</div>

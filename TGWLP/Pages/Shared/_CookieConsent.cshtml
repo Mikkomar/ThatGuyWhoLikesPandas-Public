@@ -1,0 +1,23 @@
+﻿@using Microsoft.AspNetCore.Http.Features
+@inject CultureLocalizer Localizer
+
+@{
+    var consentFeature = Context.Features.Get<ITrackingConsentFeature>();
+    var showBanner = !consentFeature?.CanTrack ?? false;
+    var cookieString = consentFeature?.CreateConsentCookie();
+}
+
+@if (showBanner) {
+<div class="cookieConsent-wrapper" title="@Localizer["CookiePolicy_Title"]">
+    <div class="row">
+        <div class="col-md-12">
+            <div>
+                <p class="text-justify">@Localizer["CookiePolicy_Text"]</p>
+            </div>
+            <div class="text-center">
+                <button id="btnCookieConsentAccept" class="button" data-cookie-string="@cookieString">@Localizer["CookiePolicy_Accept"]</button>
+            </div>
+        </div>
+    </div>
+</div>
+}

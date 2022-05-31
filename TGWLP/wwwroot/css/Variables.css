@@ -1,0 +1,39 @@
+﻿:root {
+    --color-main: 44, 110, 73;
+    --color-secondary: 254, 254, 227;
+    --color-navbar: 44, 110, 73;
+    --color-button: 82,185,118;
+    --color-button-hover: 69,172,106;
+    --text-white: #FFFFFF;
+    --background-image: url('/images/background.jpg');
+}
+
+@font-face {
+    font-family: AlfaSlab;
+    src: url(/fonts/AlfaSlabOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Condensed;
+    src: url(/fonts/RobotoCondensed-Regular.ttf);
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url(/fonts/Raleway-Regular.ttf);
+}
+
+@font-face {
+    font-family: Raleway-thin;
+    src: url(/fonts/Raleway-Thin.ttf);
+}
+
+@font-face {
+    font-family: Raleway-bold;
+    src: url(/fonts/Raleway-Bold.ttf);
+}
+
+@font-face {
+    font-family: Oswald;
+    src: url(/fonts/oswald.light.ttf);
+}

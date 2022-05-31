@@ -1,0 +1,109 @@
+﻿@inject CultureLocalizer Localizer;
+@{
+    bool LoggedIn = (bool)ViewData["LoggedIn"];
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["PageTitle"] - TGWLP</title>
+    <link rel="icon" type="image/x-icon" href="~/images/favicons/TGWLP_Favicon_2_32.ico" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/stories.css" />
+    <link rel="stylesheet" href="~/css/buttons.css" />
+    <link rel="stylesheet" href="~/css/nav.css" />
+    <link rel="stylesheet" href="~/css/cookieConsent.css" />
+    <link rel="stylesheet" href="~/lib/jquery-ui-1.13.0/jquery-ui.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js" type="text/javascript"></script>
+    <script src="~/lib/jquery-ui-1.13.0/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" defer></script>
+    <script src="~/js/animations.js" type="text/javascript" defer></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FSHF26P950"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-FSHF26P950');
+    </script>
+</head>
+<body class="background-site vh-100">
+    <header>
+        <nav class="navbar fixed-top navbar-expand-sm navbar-toggleable-sm navbar-dark box-shadow mb-3 nav-no-spacing bg-nav">
+            <div class="container text-roboto">
+                <a class="navbar-brand float-left" asp-area="" asp-page="/Index">@Localizer["Site_Title"]</a>
+                <div class="order-md-last order-lg-last">
+                    <div class="float-right text-color-white">
+                        <a href="https://www.instagram.com/thatguywholikespandas/" title="Instagram" target="_blank" class="link-nostyle d-inline-block">
+                            <ion-icon name="logo-instagram" size="large" style="pointer-events:none"></ion-icon>
+                        </a>
+                        <a href="https://www.linkedin.com/in/mikko-marttila/" title="LinkedIn" target="_blank" class="link-nostyle d-inline-block">
+                            <ion-icon name="logo-linkedin" size="large" style="pointer-events:none"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-color-white" asp-page="/Stories">@Localizer["Stories"]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-color-white" asp-page="/About/index">@Localizer["About"]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-color-white" asp-page="/Privacy">@Localizer["Privacy"]</a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav float-right ml-auto">
+                        @if (LoggedIn)
+                        {
+                        <li class="nav-item float-right">
+                            <a class="nav-link text-color-white" asp-controller="Account" asp-action="LogOut">Sign out</a>
+                        </li>
+                        }
+                    </ul>
+                    @*<partial name="_LoginPartial" />*@
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="welcome-wrapper">
+            @await Html.PartialAsync("_Welcome") 
+    </div>
+    <div class="container">
+        <div class="row vh-100 page-wrapper">
+            <div class="col-12 background-page">
+                <div class="container">
+                    @await Html.PartialAsync("_CookieConsent") 
+                    <main role="main" class="pb-3 pt-5">
+                        @RenderBody()
+                    </main>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*<div class="footer-wrapper w-100">
+        <footer class="footer text-light bg-nav">
+            <div class="container">
+                &copy; 2021 - TGWLP - <a class="text-light" asp-area="" asp-page="/Privacy">Privacy</a>
+            </div>
+        </footer>
+    </div>*@
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

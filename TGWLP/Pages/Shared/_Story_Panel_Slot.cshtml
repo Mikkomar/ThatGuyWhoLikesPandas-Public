@@ -1,0 +1,10 @@
+﻿@model TGWLP.BLL.Models.StoryViewModel
+@inject CultureLocalizer Localizer
+@{
+}
+
+<a class="link-nostyle" asp-page="/Story/Index" asp-route-id="@Model.Id" asp-route-returnUrl="/Index">
+    <li class="story-panel-slot" title="@Model.Title">
+        @Model.Title
+    </li>
+</a>

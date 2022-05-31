@@ -1,0 +1,59 @@
+﻿@page
+@model TGWLP.Pages.About.IndexModel
+@inject TGWLP.CultureLocalizer Localizer
+@{
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="row pb-5">
+            <div class="col-12">
+                <h1 class="text-center text-raleway">@Localizer["About_Title"]</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="card mt-2 mb-2">
+                    <div class="card-header bg-main text-color-white">
+                        <div class="card-title">
+                            <h3 class="text-center text-raleway">@Localizer["About_Paragraph1_Title"]</h3>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="text-roboto text-justify">
+                            @Localizer["About_Paragraph1_Text"]
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="card mt-2 mb-2">
+                    <div class="card-header bg-main text-color-white">
+                        <div class="card-title">
+                            <h3 class="text-center text-raleway">@Localizer["About_Paragraph2_Title"]</h3>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        @Html.Raw(Localizer["About_Paragraph2_Text"])
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="card mt-2 mb-2">
+                    <div class="card-header bg-main text-color-white">
+                        <div class="card-title">
+                            <h3 class="text-center text-raleway">@Localizer["About_Paragraph3_Title"]</h3>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        @Html.Raw(Localizer["About_Paragraph3_Text"])
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Log In</value>
+  </data>
+  <data name="NewStory" xml:space="preserve">
+    <value>New Story</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="Site_Title" xml:space="preserve">
+    <value>That Guy Who Likes Pandas</value>
+  </data>
+  <data name="Story" xml:space="preserve">
+    <value>Story</value>
+  </data>
+  <data name="Stories" xml:space="preserve">
+    <value>Stories</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="PublishDate" xml:space="preserve">
+    <value>Publishing Date</value>
+  </data>
+  <data name="AddNew" xml:space="preserve">
+    <value>Add New</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Welcome</value>
+  </data>
+  <data name="CookiePolicy_Title" xml:space="preserve">
+    <value>Cookie Policy</value>
+  </data>
+  <data name="CookiePolicy_Text" xml:space="preserve">
+    <value>ThatGuyWhoLikesPandas.com does not collect any data from the visitor's activities on the site and navigating the site does not require cookies. Only users who are allowed to use the logging in functionality are required to use a cookie for page authentication. No activity-tracking cookies are created for non-signed in users. A cookie storing the user's consent to the Cookie Policy is created.</value>
+  </data>
+  <data name="CookiePolicy_Accept" xml:space="preserve">
+    <value>I understand and consent to the Cookie Policy</value>
+  </data>
+  <data name="MainPage" xml:space="preserve">
+    <value>Main page</value>
+  </data>
+  <data name="Return" xml:space="preserve">
+    <value>Return</value>
+  </data>
+  <data name="Text" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="BookId" xml:space="preserve">
+    <value>Book identifier</value>
+  </data>
+  <data name="BookReferenced" xml:space="preserve">
+    <value>The Book I Talk About</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="About_Title" xml:space="preserve">
+    <value>ThatGuyWhoLikesPandas.com</value>
+  </data>
+  <data name="About_Paragraph1_Title" xml:space="preserve">
+    <value>What is it?</value>
+  </data>
+  <data name="About_Paragraph1_Text" xml:space="preserve">
+    <value>ThatGuyWhoLikesPandas.com is my hobbyist project, displaying both my programming and writing capabilities. The website is constantly under development. It has been programmed with .NET 6.0 and it is hosted on an external VPS. I develop the website according to my needs and ideas to showcase what I am capable of as a web developer. I also write the occasional story and publish them on this site for my own enjoyment.</value>
+  </data>
+  <data name="About_Paragraph2_Title" xml:space="preserve">
+    <value>How has it been developed?</value>
+  </data>
+  <data name="About_Paragraph2_Text" xml:space="preserve">
+    <value>&lt;p class="text-roboto text-justify"&gt;
+                            I have utilized the skills and knowledge I have acquired on my web developer career to program and maintain this website. As a web developer, I adhere to these three design principles:
+                            &lt;ul class="list-group"&gt;
+                                &lt;li class="list-group-item"&gt;
+                                    &lt;h6 class="text-raleway-bold"&gt;Responsivness&lt;/h6&gt;
+                                    &lt;p class="text-roboto text-justify"&gt;
+                                        When developing a website I make sure it looks appealing on both desktop and mobile. I use Bootstrap to plan the grid layout for every page, and organize the elements in a way that makes browsing the site simple.
+                                    &lt;/p&gt;
+                                &lt;/li&gt;
+                                &lt;li class="list-group-item"&gt;
+                                    &lt;h6 class="text-raleway-bold"&gt;Ease of use&lt;/h6&gt;
+                                    &lt;p class="text-roboto text-justify"&gt;
+                                        I would further divide "ease of use" into three categories: availability, clarity and recognition. My goal is to have my website being accessible to all visitors, I make the page layout as intuitive as possible and I make the website elements' functions recognizable by their visual design.
+                                    &lt;/p&gt;
+                                &lt;/li&gt;
+                                &lt;li class="list-group-item"&gt;
+                                    &lt;h6 class="text-raleway-bold"&gt;Simplicity&lt;/h6&gt;
+                                    &lt;p class="text-roboto text-justify"&gt;
+                                        One of my favorite quotes I learned on my career is the following: "You're not done when there's nothing left to add. You're done when there's nothign left to take away." In design I favor simple color palettes, fonts and minimalistic page contents.
+                                    &lt;/p&gt;
+                                &lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/p&gt;
+                        &lt;p class="text-roboto text-justify"&gt;
+                            The technology stack I use with this particular website is the following:
+                            &lt;ul class="list-group text-roboto"&gt;
+                                &lt;li class="list-group-item"&gt;
+                                    &lt;b&gt;.NET 6.0&lt;/b&gt;, including &lt;b&gt;EntityFramework Core&lt;/b&gt;
+                                &lt;/li&gt;
+                                &lt;li class="list-group-item"&gt;
+                                    &lt;b&gt;CSS&lt;/b&gt;, &lt;b&gt;Bootstrap&lt;/b&gt;
+                                &lt;/li&gt;
+                                &lt;li class="list-group-item"&gt;
+                                    &lt;b&gt;JavaScript&lt;/b&gt;, with &lt;b&gt;JQuery&lt;/b&gt; and &lt;b&gt;GSAP&lt;/b&gt;
+                                &lt;/li&gt;
+                                &lt;li class="list-group-item"&gt;
+                                    &lt;b&gt;MS SQL Server&lt;/b&gt;
+                                &lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/p&gt;
+                        &lt;p class="text-roboto text-justify"&gt;
+                            If you're interested in the website's source code, you can find it in the public GitHub repository &lt;a target="_blank" href="https://github.com/Mikkomar/ThatGuyWhoLikesPandas-Public"&gt;here&lt;/a&gt;.
+                        &lt;/p&gt;</value>
+  </data>
+  <data name="About_Paragraph3_Title" xml:space="preserve">
+    <value>What are the main inspirations for the pieces of writing?</value>
+  </data>
+  <data name="About_Paragraph3_Text" xml:space="preserve">
+    <value>                        &lt;p class="text-roboto text-justify"&gt;
+                            One of my hobbies is reading. I read a lot of books, mostly non-fiction but also some fiction on the side. As it is with every other person, instances of media we consume shape our views and how we approach life. If I had to name any works of entertainment that have shaped the way I write about things and life in general, I would name the following:
+                            &lt;ul class="list-group"&gt;
+                                &lt;li class="list-group-item"&gt;
+                                    &lt;h6 class="text-raleway-bold"&gt;The Hitchiker's Guide to the Galaxy&lt;/h6&gt;
+                                    &lt;p class="text-roboto text-justify"&gt;What makes the book fun to read is not what Douglas Adams wrote, but &lt;i&gt;how&lt;/i&gt; he wrote. I read this book at an early age and it taught me the power behind dry satire and imaginatively constructed similies. Other authors claimed to have been inspired by Douglas Adams, such as Yahtzee Croshaw, have contributed to my writing style by their works as well.&lt;/p&gt;
+                                &lt;/li&gt;
+                                &lt;li class="list-group-item"&gt;
+                                    &lt;h6 class="text-raleway-bold"&gt;Blackadder&lt;/h6&gt;
+                                    &lt;p class="text-roboto text-justify"&gt;This British sitcom starring Rowan Atkinson is hands-down one of the funniest things I have ever seen, and greatly contributes to my sense of humor. Someone once said that there is no genuinely funny compliment, and this series makes me think of that phrase. The main character Blackadder is one of the great meanies in TV history, constantly picking on people around him and oozing contempt. The way the show cleverly expressed how such a mind works and the way the characters delivered the ingeniously- written insults, revealed me how much more powerful a comedic tool a negative is compared to a positive.&lt;/p&gt;
+                                &lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/p&gt;</value>
+  </data>
+</root>

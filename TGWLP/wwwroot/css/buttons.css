@@ -1,0 +1,25 @@
+﻿@import "Variables.css";
+
+.button {
+    display: inline-block;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 4em;
+    padding-right: 4em;
+    margin: 0 0.3em 0.3em 0;
+    border-width: 0;
+    border-radius: 0.2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: Roboto-Condensed;
+    font-weight: 400;
+    color: var(--text-white);
+    background-color: rgb(var(--color-button));
+    box-shadow: inset 0 -0.6em 1em -0.35em rgba(0,0,0,0.17),inset 0 0.6em 2em -0.3em rgba(255,255,255,0.15),inset 0 0 0em 0.05em rgba(255,255,255,0.12);
+    text-align: center;
+}
+
+    .button:hover, .button:active {
+        background-color: rgb(var(--color-button-hover));
+    }

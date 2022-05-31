@@ -1,0 +1,18 @@
+﻿@import "Variables.css";
+
+.cookieConsent-wrapper {
+    font-family: Roboto;
+}
+
+    .ui-widget-header {
+        text-align: center;
+        color: var(--text-white) !important;
+        background: rgb(var(--color-main)) !important;
+    }
+
+.cookieConsent-button {
+    position: absolute;
+    bottom: 2em;
+    transform: translate(-50%, 0);
+    left: 50%;
+}

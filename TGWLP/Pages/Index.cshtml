@@ -1,0 +1,39 @@
+﻿@page
+@model IndexModel
+@inject TGWLP.CultureLocalizer Localizer;
+@{
+    ViewData["Title"] = "Home page";
+}
+@section Scripts{ 
+<script type="text/javascript">
+</script>
+}
+
+<div class="max-height-80">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="text-center text-alfaslab text-color-main">
+                <div class="slide-in-left"><label class="header-responsive-h1">That Guy</label></div>
+                <div class="slide-in-right"><label class="header-responsive-h1">Who Likes Pandas</label></div>
+            </div>
+
+            <hr />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+ 
+            <div class="row">
+                <div class="d-md-none d-lg-block col-lg-3 order-lg-last flex-column">
+                    @await Html.PartialAsync("_Story_Panel", Model.PublishedStoriesByYear)
+                </div>
+                <div class="col-md-12 col-lg-9 pl-lg-5 flex-column snapparent">
+                    @foreach (var story in Model.PublishedStories.OrderByDescending(x => x.PublishDate.Value).Take(3).ToList()) {
+                        @await Html.PartialAsync("_Story_Preview", story)
+                    }
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

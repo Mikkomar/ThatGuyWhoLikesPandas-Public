@@ -1,0 +1,81 @@
+﻿@page "{id?}"
+@model TGWLP.Pages.Story.EditModel
+@inject CultureLocalizer Localizer;
+@{
+    Layout = Model.Layout;
+}
+@section Scripts{
+    <script type="text/javascript" src="https://cdn.tiny.cloud/1/fy1kyfggn82l2my3dsk96q57s8i5hdequn7kkua63vrv56bf/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script type="text/javascript">
+        tinymce.init({
+            selector: 'textarea',
+            invalid_styles: 'color font-family font-size background-color margin-bottom',
+            keep_styles: false,
+            plugins: 'image code',
+            toolbar: 'undo redo | link image | code',
+            image_title: true,
+            automatic_uploads: true,
+            file_picker_types: 'image',
+            file_picker_callback: function (cb, value, meta) {
+                var input = document.createElement('input');
+                input.setAttribute('type', 'file');
+                input.setAttribute('accept', 'image/*');
+                input.onchange = function () {
+                    var file = this.files[0];
+
+                    var reader = new FileReader();
+                    reader.onload = function () {
+                        var id = 'blobid' + (new Date()).getTime();
+                        var blobCache = tinymce.activeEditor.editorUpload.blobCache;
+                        var base64 = reader.result.split(',')[1];
+                        var blobInfo = blobCache.create(id, file, base64);
+                        blobCache.add(blobInfo);
+
+                        cb(blobInfo.blobUri(), { title: file.name });
+                    };
+                    reader.readAsDataURL(file);
+                };
+
+                input.click();
+            },
+        });
+    </script>
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <form method="post">
+            <div class="mb-1">
+                <b>@Html.LabelFor(x => Model.Story.Title)</b>:
+                <input type="text" class="form-control" asp-for="@Model.Story.Title" />
+                <div class="text-danger">
+                    @Html.ValidationMessageFor(x => Model.Story.Title)
+                </div>
+            </div>
+            <div class="mb-1">
+                <b>@Html.LabelFor(x => Model.Story.Text)</b>:
+                <textarea class="story-textarea" asp-for="@Model.Story.Text"></textarea>
+                <div class="text-danger">
+                    @Html.ValidationMessageFor(x => Model.Story.Text)
+                </div>
+            </div>
+            <div class="mb-1">
+                <b>@Html.LabelFor(x => Model.Story.PublishDate)</b>:
+                <input type="date" class="form-control" asp-for="@Model.Story.PublishDate" />
+                <div class="text-danger">
+                    @Html.ValidationMessageFor(x => Model.Story.PublishDate)
+                </div>
+            </div>
+            <div class="mb-1">
+                <b>@Html.LabelFor(x => Model.Story.BookId)</b>:
+                <input type="text" class="form-control" asp-for="@Model.Story.BookId" />
+                <div class="text-danger">
+                    @Html.ValidationMessageFor(x => Model.Story.BookId)
+                </div>
+            </div>
+            <div class="mb-1">
+                <button type="submit" asp-page-handler="Save" class="btn btn-primary">@Localizer["Save"]</button>
+            </div>
+        </form>
+    </div>
+</div>
